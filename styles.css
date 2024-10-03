@@ -1,0 +1,459 @@
+/* Disable scrolling */
+html, body {
+  overflow: hidden; /* This will prevent scrolling */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  header {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex; /* Add flexbox for horizontal layout */
+    justify-content: space-between; /* Space between logo and menu */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #e0e0e0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Change to row for horizontal menu */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #1280c0;
+  }
+    
+  /* Ensure each section takes up the full viewport height and allows scrolling within itself */
+  section {
+    height: 100vh;  /* Full viewport height for each section */
+    overflow-y: auto;  /* Allow vertical scrolling within the section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Apply scroll to individual sections */
+  #home, #about, #projects, #skills, #contact {
+    overflow-y: auto;  /* Enable vertical scrolling within these sections */
+    scroll-behavior: smooth;  /* Optional: Smooth scrolling inside sections */
+  }
+
+  /* Only show the target section when navigating */
+  section:target {
+    display: block; /* Show the section when navigated to */
+  }
+
+  
+  /* Home Section */
+  #home {
+    /* Update home section to center everything, including text */
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  /* Ensure the text is centered */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  #home h2 {
+    font-size: 3em;  /* Adjust size */
+    margin-bottom: 10px;
+  }
+
+  #home p {
+    font-size: 1.5em;  /* Adjust size */
+    margin-top: 10px;
+  }
+    
+  .logo-img {
+    width: 150px;  /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;  /* This makes the image a circle */
+    object-fit: cover;
+    margin: 20px auto; /* Center the logo horizontally */
+    display: block;
+  }
+    /* Center the content in all sections */
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
+    text-align: center;       /* Center text */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+
+   
+ /* Default Styles (For Desktop) */
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /* Center the content in all sections */
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
+    text-align: center;       /* Center text */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+/* Center and bold all headings on each page */
+section h2 {
+  text-align: center;  /* Center the heading */
+  font-size: 3em;      /* Adjust as needed */
+  font-weight: bold;   /* Make it bold */
+  margin-bottom: 20px;
+}
+
+.about-education, .about-experience {
+  width: 30%;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 20px; /* Space between the sections */
+}
+
+/* Mobile Version Only */
+@media (max-width: 768px) {
+  .about-container {
+      display: flex;
+      flex-direction: row; /* Stack horizontally */
+      justify-content: space-between;
+      flex-wrap: wrap; /* Allow elements to wrap to the next line */
+  }
+
+  .about-category {
+      width: 45%;
+      text-align: center;
+      background-color: #1e1e1e;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .about-category:hover {
+      background-color: #1280c0;
+  }
+
+  .about-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      display: none; /* Initially hide the list */
+  }
+
+  .about-list.active {
+      display: block;
+  }
+
+  /* Profile Image below Education and Myself */
+  /* Update profile image styles */
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 20px;
+  }
+}
+  
+  /* Projects Section */
+  
+  /* Reduce the size of each project */
+  .project {
+    position: relative;
+    width: 300px;  /* Reduce width from 400px to 300px */
+    margin: 10px;  /* Reduce margin to create more space */
+    cursor: pointer;
+  }
+    /* Center the content in all sections */
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
+    text-align: center;       /* Center text */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Center and bold all headings on each page */
+  section h2 {
+    text-align: center;  /* Center the heading */
+    font-size: 3em;      /* Adjust as needed */
+    font-weight: bold;   /* Make it bold */
+    margin-bottom: 20px;
+  }
+
+  .projects-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;  /* Add gap to ensure projects are spaced evenly */
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Project Info (Hidden Initially) */
+  .project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .project:hover .project-info {
+    opacity: 1;
+  }
+  
+  .project-info p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  
+  .project-info a {
+    color: #1280c0;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.1em;
+  }
+  
+  .project-info a:hover {
+    color: #ffffff;
+  }
+  
+   
+
+  /* Center the skills categories and stack them vertically */
+  .skills-container {
+    display: flex;
+    flex-direction: column;  /* Stack categories one below the other */
+    align-items: center;     /* Center categories horizontally */
+    gap: 30px;              /* Add gap between the categories */
+  }
+   /* Center the content in all sections */
+   section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
+    text-align: center;       /* Center text */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+    /* Center and bold all headings on each page */
+  section h2 {
+    text-align: center;  /* Center the heading */
+    font-size: 3em;      /* Adjust as needed */
+    font-weight: bold;   /* Make it bold */
+    margin-bottom: 20px;
+  }
+
+  /* Style for each skill category */
+  .skill-category {
+    width: 80%;              /* Adjust the width for better fitting */
+    text-align: center;      /* Center text */
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Change background color on hover */
+  .skill-category:hover {
+    background-color: #1280c0;
+  }
+
+  /* Style for the skill list and ensure spacing between items */
+  .skill-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;  /* Stack skills vertically */
+    align-items: center;      /* Center each skill */
+    gap: 10px;               /* Add space between skills */
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .skill-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  /* Contact Section: Full Page */
+  #contact {
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+    /* Center the content in all sections */
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
+    text-align: center;       /* Center text */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+    /* Center and bold all headings on each page */
+  section h2 {
+    text-align: center;  /* Center the heading */
+    font-size: 3em;      /* Adjust as needed */
+    font-weight: bold;   /* Make it bold */
+    margin-bottom: 20px;
+  }
+
+  /* Social Links Container */
+  /* Stack the contact links vertically */
+  .contact-links {
+    display: flex;
+    flex-direction: column;  /* Arrange them vertically */
+    align-items: center;  /* Center the links horizontally */
+    gap: 20px;  /* Add some space between each link */
+  }
+
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+  /* Resume Download Box (no background) */
+  .resume-box {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;  /* Space above the box */
+  }
+
+  /* Resume download link */
+  .resume-link {
+    display: inline-block;
+    background-color: #1280c0;  /* Background color for the download button */
+    color: #fff;  /* Text color */
+    padding: 10px 20px;  /* Padding around the text */
+    border-radius: 5px;  /* Rounded corners */
+    text-decoration: none;  /* Remove underline */
+    transition: background-color 0.3s;  /* Smooth background color transition */
+  }
+
+  .resume-link:hover {
+    background-color: #0f6f9e;  /* Darker shade on hover */
+  }
+  /* Contact section layout */
+  .contact-container {
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  /* Add space between elements */
+    height: 100%;  /* Ensure it takes up the full height of the section */
+  }
+
+  /* Footer Styling */
+  footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: transparent;  /* Keep it transparent within the contact section */
+    text-align: center;
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  footer a:hover {
+    color: #1280c0;
+  }
